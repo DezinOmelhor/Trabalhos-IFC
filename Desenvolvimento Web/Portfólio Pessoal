@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+      }
+      .foto {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 10px 0;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="eu.jpeg" />
+      <h1>André Reif Conradt</h1>
+      <h2>Informações de Contato</h2>
+      <div class="section">
+        <p>Email: landreconradl@gmail.com</p>
+        <p>Telefone: (47) *-*</p>
+        <p>LinkedIn: linkedin.com/meu-perfil</p>
+      </div>
+
+      <h2>Resumo Profissional</h2>
+      <div class="section">
+        <p>Cursei 3 cursos profissionais na área empresarial.</p>
+      </div>
+
+      <h2>Formação Acadêmica</h2>
+      <div class="section">
+        <h3>IFC e Uniasselvi</h3>
+        <p>2028.</p>
+      </div>
+
+      <h2>Habilidades</h2>
+      <div class="section">
+        <p>
+          Conhecimentos em programação e robótica, empreendedorismo, vendas e
+          telemarketing.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
