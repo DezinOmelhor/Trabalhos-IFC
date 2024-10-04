@@ -9,7 +9,7 @@ def fatorial(n):
         #Retorna n * fatorial (n-1)
         return n * fatorial(n - 1)
     #pede n
-n = int(input("Digite um Número"))
+n = int(input("Digite um Número "))
     #x = fatorial (n)
 x = fatorial(n)
 #mostrar x
