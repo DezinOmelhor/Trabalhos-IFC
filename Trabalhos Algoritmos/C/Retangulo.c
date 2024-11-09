@@ -19,7 +19,7 @@ void sleep_ms(int milliseconds)
 { // cross-platform sleep function
 #ifdef WIN32
    Sleep(milliseconds);
-#elif _POSIX_C_SOURCE >= 199309L
+#elif _POSIX_C_SOURCE >= 199309L                                                //Parte sem explicação, precisa disso pra funcionar eu acho '-'
    struct timespec ts;
    ts.tv_sec = milliseconds / 1000;
    ts.tv_nsec = (milliseconds % 1000) * 1000000;
