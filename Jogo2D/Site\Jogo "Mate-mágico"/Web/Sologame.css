@@ -1,0 +1,51 @@
+/* Fundo da página GIF */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('estrelas.gif') no-repeat center center fixed; /* Substituir link pelo meu GIF */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Contêiner principal */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Quadro do jogo */
+.game-frame {
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto */
+    border: 2px solid #ff3333; /* Borda vermelha */
+    width: 800px; /* contêiner central */
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff3333;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.back-button:hover {
+    background: #900000;
+    color: white;
+}
