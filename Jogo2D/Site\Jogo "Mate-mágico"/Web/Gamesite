@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Mate-mágico!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Mate-mágico</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Encare o Desafio!</h2>
+            <p>Teste o quão rápido você consegue pensar!</p>
+            <button id="play-button" class="cta-btn">Jogar Solo</button>
+            <button id="play-button2" class="cta-btn secondary">Jogar Versus</button>
+        </section>
+
+        <section id="sobre" class="about">
+            <h3>Sobre o Jogo</h3>
+            <p>Mate-mágico vai testar os seus limites ao lhe fazer várias perguntas em pouco tempo! Está preparado?</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="javascript:void(0);" id="copy-link">Não se esqueça de compartilhar com seus amigos!</a></p>
+    </footer>
+    <script src="script.js"></script> <!-- incluir o JavaScript -->
+    <script>
+        // Seleciona o link pelo ID
+        const copyLink = document.getElementById('copy-link');
+    
+        // Texto que será copiado
+        const shareMessage = "file:///C:/Users/André%20R.%20Conradt/Desktop/Visual%20Studio%20A/Jogos/Web/Gamesite.html";
+    
+        // Adicionar o evento de clique
+        copyLink.addEventListener('click', () => {
+            // Copiar o texto para a área de transferência
+            navigator.clipboard.writeText(shareMessage).then(() => {
+                alert("Texto copiado: 'Você desafiado a uma partida de mate-mágico!'");
+            }).catch(err => {
+                console.error('Erro ao copiar texto: ', err);
+            });
+        });
+    </script>
+    <div id="modal-sobre" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-sobre">&times;</span>
+            <h3>Sobre o Site</h3>
+            <p>Olá caro Professor/Aluno! deve estar se perguntando de onde surgiu este site não é? Bom, ele surgiu com a intenção de incentivar o aprendizado por meio da competitividade e entretenimento! Usando a tecnologia em prol do conhecimento, testando, provocando e treinando a capacidade cognitiva de todos que passarem por aqui. Vamos testar as suas?!</p>
+        </div>
+    </div>
+    <div id="modal-contato" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-contato">&times;</span>
+            <h3>Contato</h3>
+            <p>Telefone: (99) 9185-9343</p>
+            <p>Email: instituiçãoImaginária.org.com</p>
+            <p>GitHub: <a href="https://github.com/DezinOmelhor/Trabalhos-IFC/tree/main/Jogo2D" target="_blank">github.com/exemplo</a></p>
+        </div>
+    </div>
+    <script>
+
+        const modalSobre = document.getElementById('modal-sobre');
+        const modalContato = document.getElementById('modal-contato');
+        const closeSobre = document.getElementById('close-sobre');
+        const closeContato = document.getElementById('close-contato');
+    
+    
+        document.querySelector('.nav-links a[href="#sobre"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            modalSobre.style.display = 'flex';
+        });
+
+        document.querySelector('.nav-links a[href="#contato"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            modalContato.style.display = 'flex';
+        });
+    
+    
+        closeSobre.addEventListener('click', () => modalSobre.style.display = 'none');
+        closeContato.addEventListener('click', () => modalContato.style.display = 'none');
+    
+        window.addEventListener('click', (e) => {
+            if (e.target === modalSobre) modalSobre.style.display = 'none';
+            if (e.target === modalContato) modalContato.style.display = 'none';
+        });
+    </script>    
+</body>
+</html>
